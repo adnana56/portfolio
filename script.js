@@ -1,3 +1,4 @@
+
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
@@ -63,3 +64,13 @@ navbar.classList.remove("active");
   backSpeed: 60,
   loop: true
 });
+function sendmail(){
+  let parms={
+    name:document.getElementById("name").value,
+    email:document.getElementById("email").value,
+    number:document.getElementById("number").value,
+    subject:document.getElementById("subject").value,
+    message:document.getElementById("message").value,
+  }
+   emailjs.send("service_ruqlua6","template_rm3ygie",parms).then(alert("Email sent!!"))
+}

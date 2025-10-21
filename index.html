@@ -8,7 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="index.css">
-    
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "H2ueusNekU2CIc_1c",
+      });
+   })();
+</script>
 </head>
 <body>
        <!--header-->
@@ -155,15 +164,15 @@
           <h2>Contact <span>Me</span></h2>
           <form action="#">
                <div class="input_box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email Adress">
+                    <input type="text" placeholder="Full Name" id="name">
+                    <input type="email" placeholder="Email Adress" id="email">
                </div>
                <div class="input_box">
-                    <input type="number" placeholder="Mobile NUmber">
-                    <input type="text" placeholder="Subject">
+                    <input type="number" placeholder="Mobile NUmber" id="number">
+                    <input type="text" placeholder="Subject" id="subject">
                </div>
-               <textarea name="" id="" cols="30" rows="10" placeholder=""> </textarea>
-               <input type="submit" value="send message" class="btn">
+               <textarea name="" id="message" cols="30" rows="10" placeholder=""> </textarea>
+               <input onclick="sendmail()" type="submit" value="send message" class="btn">
 
           </form>  
        </section>
